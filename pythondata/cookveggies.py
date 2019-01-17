@@ -7,6 +7,7 @@ with open('vegetables.csv', 'r') as f:
     reader = csv.DictReader(f)
     vegetables = [dict(row) for row in reader] # Convert Ordered Dict to regular dict (python 3.6 or higher)
 
+# Print to terminal
 pprint(vegetables)
 
 # Write vegetables.json
