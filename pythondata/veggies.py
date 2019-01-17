@@ -19,7 +19,6 @@ with open('vegetables.csv', 'w') as f:
 	for x in vegetables:
 		name = x['name']
 		color = x['color']
-		length_of_name = len(x['name'])
 		# Write Data
 		writer.writerow([name, color])
 
