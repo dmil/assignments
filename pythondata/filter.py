@@ -1,4 +1,5 @@
 from pprint import pprint
+import json
 
 cars = [
     {"model": "Yaris", "make": "Toyota", "color": "red"},
@@ -15,13 +16,6 @@ for car in cars:
     if car['color'] == 'red':
         red_cars.append(car)
 
-# group by make
-red_cars_by_make = {}
-for car in red_cars:
-    make = car['make']
-    if make in red_cars_by_make:
-        red_cars_by_make[make].append(car)
-    else:
-        red_cars_by_make[make] = [car]
+with open('redcars.json','w') as f:
+    json.dump(red_cars, f, indent=2)
 
-pprint(red_cars_by_make)
