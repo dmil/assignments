@@ -21,6 +21,7 @@ with open('members.csv', 'w') as f:
 		secretIdentity = member['secretIdentity']
 		powers = member['powers']
 
+
 		squadName = squad['squadName']
 		homeTown = squad['homeTown']
 		formed = squad['formed']
