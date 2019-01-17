@@ -1,9 +1,8 @@
-rows = [
-    {"name": "Rachel", "age": 34},
-    {"name": "Monica", "age": 34},
-    {"name": "Phoebe", "age": 37}
-]
+from datetime import datetime
 
-# Filter to millenials
+raw_date = "2017-01-11"
+date_format = "%Y-%m-%d"
 
-# Convert to CSV
+parsed_date = datetime.strptime(raw_date, date_format)
+date_str = parsed_date.strftime("%m/%d/%y") # 01/11/17
+print(date_str)
